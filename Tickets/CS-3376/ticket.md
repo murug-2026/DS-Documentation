@@ -3,7 +3,7 @@ Description
 
 We need to fix this across all reports using it.
 
-
+```sql
 LEFT JOIN "HonkAPI" hapi on (hapi.id= (
         SELECT honk.id 
         FROM public."HonkAPI" honk
@@ -13,6 +13,7 @@ LEFT JOIN "HonkAPI" hapi on (hapi.id= (
         LIMIT 1
     )
 )
+```
 example of the issue is https://compass.driven-solutions.com/view-case/306318/
 
 was completed by TNS but did not appear in the billing report since it was later dispatched to HONK.
